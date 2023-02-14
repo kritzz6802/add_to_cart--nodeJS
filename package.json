@@ -1,0 +1,24 @@
+{
+  "name": "nodeapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index1.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kirti-Koyani/Node-js-project.git"
+  },
+  "author": "kirti koyani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kirti-Koyani/Node-js-project/issues"
+  },
+  "homepage": "https://github.com/Kirti-Koyani/Node-js-project#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2"
+  }
+}

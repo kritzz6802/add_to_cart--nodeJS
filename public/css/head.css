@@ -1,0 +1,99 @@
+.nav-area {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    transition: top .6s;
+    background: rgba(156, 232, 255, 0.6);
+    /* padding: 10px; */
+    overflow: hidden;
+    height: 80px;
+}
+.nav-area.animate {
+    top: -71px;
+}
+
+.nav-area.sticky {
+    top: 0;
+    z-index: 99;
+}
+
+.menu-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    display: inline - block;
+    margin: 0;
+}
+
+.logo a {
+    text-decoration: none;
+    color: black;
+    font-size: 32px;
+    font-family: merienda;
+}
+.navvv {
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+.right-nav {
+    overflow: hidden;
+    list-style: none;
+}
+
+.right-nav li {
+    float: left;
+    margin-left: 16px;
+}
+
+.right-nav li a {
+    color: black;
+    text-decoration: none;
+    font-family: roboto;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* css of add products cards */
+
+.product{
+    border: 1px solid #aaa;
+    padding: 20px;
+    box-shadow: 2px 2px 2px 2px #eee;
+}
+.product img{
+    height: 150px;
+    object-fit: contain;
+    margin: auto;
+}
+
+/* css of cart  */
+
+.cart-title > div{
+    font-weight: bold;
+    text-align: center;
+    flex: 1;
+    border-bottom: 1px solid;
+    padding: 10px 0px;
+}
+
+.cart-product > div{
+    flex: 1;
+    text-align: center;
+    border-bottom: 1px solid;
+    padding: 10px 0px;
+
+}
+.text-end{
+    text-align: right;
+    font-weight: 900;
+    margin-right: 13em;
+}

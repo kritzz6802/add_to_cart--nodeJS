@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add product</title>
+    <%- include('../partials/headlink'); %>
+
+</head>
+
+<body>
+    <%- include('../partials/header'); %>
+        <div class="container">
+            <!-- <div class="row">
+                <div class="col-md-12"> -->
+            <h2 style="margin: 100px 0px 50px 0px;">
+                <%= edit ? 'Edit Product Page' : 'Add Products page' %>
+            </h2>
+
+            <form method='post' action="<%= edit ? '/products/edit' : '/products/add' %>">
+                <% if(edit) { %>
+                    <input type="hidden" value="<%= product.id %>" name="productId">
+                <% } %>
+                        <p>
+                            <label for="title">Title</label>
+                            <input type="text" class="form-control" value="<%= edit ? product.title : '' %>"
+                                name='title' />
+                        </p>
+                        <p>
+                            <label for="image">Image Url</label>
+                            <input type="text" class="form-control" value="<%= edit ? product.image : '' %>"
+                                name='image' />
+                        </p>
+                        <p>
+                            <label for="price">Price</label>
+                            <input type="number" class="form-control" value="<%= edit ? product.price : '' %>"
+                                step="any" name='price' />
+                        </p>
+                        <p>
+                            <label for="description">Description</label>
+                            <textarea name="description" id="" class="form-control" cols="10"
+                                rows="7"><%= edit ? product.description : '' %></textarea>
+                        </p>
+                        <p>
+                            <button class="btn btn-primary">
+                                <%= edit ? 'Edit Product' : 'Add Product' %>
+                            </button>
+                        </p>
+            </form>
+            <!-- </div>
+            </div> -->
+        </div>
+
+</body>
+
+</html>

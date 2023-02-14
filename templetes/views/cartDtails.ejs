@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart-details</title>
+    <%- include('../partials/headlink'); %>
+
+</head>
+
+<body>
+    <%- include('../partials/header'); %>
+        <div class="container">
+            <div class="row">
+
+                <h2 style="margin: 100px 0px 50px 0px;">
+                    Cart Details
+                </h2>
+                <hr />
+                <div class="col-md-12">
+                    <div class="cart-details">
+                        <div class="cart-title d-flex">
+                            <div>Product Name</div>
+                            <div>quantity</div>
+                            <div>Price per Product</div>
+                            <div>Total Price</div>
+                            <div>Actions</div>
+                        </div>
+                        <% for(let product of cartProducts) { %>
+                            <div class="cart-product d-flex">
+                                <div>
+                                    <%= product.title %>
+                                </div>
+                                <div>
+                                    <%= product.quantity %>
+                                </div>
+                                <div>$<%= product.price %>
+                                </div>
+                                <div>$<%= product.cartPrice %>
+                                </div>
+                                <div>
+                                    <form action="/cart/delete-item" method="post">
+                                        <input type="hidden" value="<%= product.id %>" name="productId">
+                                        <button class="btn btn-danger">Delete</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <% } %>
+                    </div>
+                    <h5 class="text-end">TotalPrice : $<%= totalPrice %>
+                    </h5>
+                </div>
+
+            </div>
+        </div>
+        </div>
+
+</body>
+
+</html>
